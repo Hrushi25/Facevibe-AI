@@ -1,58 +1,33 @@
-<<<<<<< HEAD
-# facevibe
-=======
-# React + TypeScript + Vite
+# FaceVibe 🧘‍♂️  
+**Applied AI Facial Wellness Web Application**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FaceVibe is a real-time facial wellness web application that combines **applied computer vision** with **generative AI** to deliver personalized stress-aware feedback and coaching.  
+The project focuses on building a **user-facing AI product** with low latency, clean engineering practices, and production-safe AI integration.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+- 🎥 **Real-time webcam-based facial analysis** with sub-second latency  
+- 📊 **Stress inference** using facial motion signals and temporal smoothing  
+- 🎯 **Gamified facial exercises** with live progress feedback  
+- 💬 **AI Trainer Chat** providing personalized coaching using a GenAI model  
+- 🔐 **Secure backend proxy** for AI integration (no API keys in frontend)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧠 Applied AI & GenAI Overview
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Applied AI
+- Live facial signal extraction from webcam input
+- Heuristic stress inference based on facial movement volatility
+- Real-time biofeedback loop driving UI behavior and exercise guidance
+- Designed for responsiveness, explainability, and low-latency interaction
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
->>>>>>> f9ab32a (Init FaceVibe)
+### Generative AI (GenAI)
+- AI trainer powered by a large language model (Gemini)
+- Context-aware responses conditioned on:
+  - User messages
+  - Inferred stress level
+  - Exercise progress
+- Backend-only LLM access via a secure proxy architecture
